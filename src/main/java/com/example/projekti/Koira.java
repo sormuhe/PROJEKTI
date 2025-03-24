@@ -1,5 +1,7 @@
 package com.example.projekti;
 
+import java.time.LocalTime;
+
 /***
  * Tätä luokkaa käytetään koiran tietojen käsittelyyn,
  * kuten nimi ja paino
@@ -7,42 +9,14 @@ package com.example.projekti;
  *
  */
 
-public class Koira {
+public class Koira extends Ruoka {
 
-        /**
-         * koiran nimi ja rotu merkkijonona
-         */
-        private String nimi;
-        private String rotu;
+    public Koira(String koiranNimi, double annos, double koiranPaino, LocalTime time) {
+        super(koiranNimi, annos, koiranPaino, time);
+    }
 
-        /**
-         * koiran piano desimaalilukuna
-         */
-        private double paino;
-
-    /**
-     * Koira perustiedoilla
-     * @param nimi String nimi
-     * @param rotu String rotu
-     * @param paino double paino
-     */
-
-    public Koira(String nimi, String rotu, double paino) {
-            this.nimi = nimi;
-            this.rotu = rotu;
-            this.paino = paino;
-        }
-
-        public String getNimi() {
-            return nimi;
-        }
-
-        public String getRotu() {
-            return rotu;
-        }
-
-        public double getPaino() {
-            return paino;
-        }
-
+    @Override
+    public String getDetails() {
+        return "";
+    }
 }
